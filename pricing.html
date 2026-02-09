@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techno Science - الأسعار والخدمات</title>
+    <link rel="icon" href="./statics/logoooo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .project-desc {
+            text-align: justify;
+            text-align-last: right;
+            line-height: 1.5;
+            color: #000000;
+            margin: 15px 0;
+        }
+        /* كود خاص بصفحة الأسعار فقط */
+        .pricing-header {
+            text-align: center;
+            padding: 40px 5%;
+            background: rgba(44, 44, 44, 0.05);
+            margin-bottom: 30px;
+            background: rgba(255, 255, 255, 0.746);
+        }
+
+        .category-container {
+            max-width: 1000px;
+            margin: 0 auto 50px;
+            padding: 0 5%;
+        }
+
+        /* تصميم بطاقة الكاتيجري */
+        .category-card {
+            background: white;
+            display: flex;
+            margin-bottom: 40px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-right: 5px solid var(--main-gold);
+            transition: transform 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* جانب الصورة */
+        .category-image {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--dark-grey);
+            position: relative;
+        }
+
+        .category-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        /* جانب التفاصيل */
+        .category-info {
+            flex: 1.5;
+            padding: 30px;
+        }
+
+        .category-info h2 {
+            color: var(--dark-grey);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--soft-grey);
+            font-size: 1.6rem;
+        }
+
+        /* قائمة الأسعار داخل الكاتيجري */
+        .price-list {
+            list-style: none;
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .price-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-name {
+            color: #555;
+            font-weight: 500;
+        }
+
+        .item-price {
+            color: var(--main-gold);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* التجاوب مع الهواتف */
+        @media (max-width: 768px) {
+            .category-card {
+                flex-direction: column; /* الصورة فوق والكلام تحت في الموبايل */
+            }
+            .category-image {
+                height: 200px;
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <div class="logo-box">
+            <img src="./statics/logoooo.png" alt="Logo" style="width: 90%;">
+        </div>
+        <div class="site-name">Techno Science</div>
+    </div>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">☰</label>
+        <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+            <li><a href="pricing.html">الأسعار</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="pricing-header">
+    <h1>قائمة الخدمات المتميزة</h1>
+    <p>اختر الفئة التي تناسب احتياجاتك التقنية</p>
+</div>
+
+<div class="category-container">
+    
+    <div class="category-card">
+        <div class="category-image">
+            <img src="./statics/myWork/469823125_122127782858483733_5288387439001847588_n.jpg" alt="Web Development">
+        </div>
+        <div class="category-info">
+            <h2>منيو محمول </h2>
+            <h5 class="project-desc">  موقع ويب بيدي لك تحكم كامل في المنيو والأسعار، تغيرها في ثانية من موبايلك. الموقع بيجمع كل حسابات السوشيال ميديا ووسائل التواصل في مكان واحد، ومعاه كرت شخصي بتصميم شيك وبار كود (QR) عشان زبائنك يوصلوا لموقعك أسرع من البرق.</h5><br><hr>
+
+            <div class="price-list">
+                <div class="price-item">
+                    <span class="item-name"> سعر الموقع </span>
+                    <span class="item-price"> جنية 500</span>
+                </div>
+                <div class="price-item">
+                    <span class="item-name">سعر ال100 كرت</span>
+                    <span class="item-price">جنية 200 </span>
+                </div>
+                <div class="price-item">
+                    <span class="item-name">سعر ال 12 استيكر الكيو ار كود</span>
+                    <span class="item-price">جنية 150 </span>
+                </div>
+                <div class="price-item">
+                    <span class="item-name">اضافة جزء العنوان بالخريطة</span>
+                    <span class="item-price">جنية 100 </span>
+                </div>
+                <div class="price-item">
+                    <span class="item-name">اضافة المساعد الذكى </span>
+                    <span class="item-price">جنية 500 </span>
+                </div>
+            </div>
+            <hr><h5 class="project-desc">     سعر الموقع بالكامل  1450 جنيه . وإحنا بنقدر ميزانيتك؛ عشان كدة تقدر تختار الإضافات اللي محتاجها بس، وهنخصم لك تكلفة أي ميزة تقرر تشيلها من السعر الإجمالي. البداية بتكون بـ 50% عربون لضمان الجدية وبدء التنفيذ فوراً .  </h5>
+        </div>
+    </div>
+
+    <div class="category-card">
+        <div class="category-image">
+            <img src="./statics/myWork/469952149_122127782804483733_1554282367885765334_n.jpg" alt="Data Science">
+        </div>
+        <div class="category-info">
+            <h2>مواقع وتطبيقات خاصة</h2> 
+            <h5 class="project-desc">ريح زبونك وخليه يطلب بضغطة واحدة! موقع كامل بـ لوحة تحكم احترافية ليك كمدير تتابع منها كل كبيرة وصغيرة. المنيو والأسعار في سلة شراء ذكية بتوصلك الطلب لحد عندك أو على الواتساب، ومعاها قائمة إعجابات عشان الزبون يحفظ منتجاته المفضلة. الموقع بيدعم لغات كتير وفيه مساعد ذكي بيرد على أسئلة العملاء فوراً. العميل هيقدر يقيم الخدمة، يوصل لصفحاتك ولمكانك على الخريطة، ومعاهم تطبيق أندرويد خاص ودخول سريع بكود الـ QR</h5><br><hr>
+            <div class="price-list">
+                <div class="price-item">
+                    <span class="item-name">سعر الموقع للمنتجات فقط</span>
+                    <span class="item-price">جنية 2000</span>
+                </div>
+                <div class="price-item">
+                    <span class="item-name">سعر ال100 كرت</span>
+                    <span class="item-price">جنية 200 </span>
+                </div>
+                <div class="price-item">
+                    <span class="item-name">سعر ال 12 استيكر الكيو ار كود</span>
+                    <span class="item-price">جنية 150 </span>
+                </div>
+                <div class="price-item">
+                    <span class="item-name">اضافه جزء اراء العملاء </span>
+                    <span class="item-price">جنية 300 </span>
+                </div>
+                <div class="price-item">
+                    <span class="item-name">اضافة جزء العنوان بالخريطة</span>
+                    <span class="item-price">جنية 100 </span>
+                </div>
+                <div class="price-item">
+                    <span class="item-name">اضافة جزء التقارير الدورية </span>
+                    <span class="item-price">جنية 300 </span>
+                </div>
+                <div class="price-item">
+                    <span class="item-name">اضافة المساعد الذكى </span>
+                    <span class="item-price">جنية 500 </span>
+                </div>
+                <div class="price-item">
+                    <span class="item-name">اضافه قائمة الاعجابات للمنتجات</span>
+                    <span class="item-price"> جنية 300</span>
+                </div>
+                <div class="price-item">
+                    <span class="item-name">تصميم تطبيق للاندرويد للموقع</span>
+                    <span class="item-price"> جنية 500</span>
+                </div>
+                <div class="price-item">
+                    <span class="item-name">اضافة لغات للموقع</span>
+                    <span class="item-price"> جنية 200</span>
+                </div>
+            </div>
+            <hr><h5 class="project-desc">     سعر الموقع بالكامل  4550 جنيه . وإحنا بنقدر ميزانيتك؛ عشان كدة تقدر تختار الإضافات اللي محتاجها بس، وهنخصم لك تكلفة أي ميزة تقرر تشيلها من السعر الإجمالي. البداية بتكون بـ 50% عربون لضمان الجدية وبدء التنفيذ فوراً .  </h5>
+        </div>
+    </div>
+
+    <div class="category-card">
+        <div class="category-image">
+            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=500" alt="Design">
+        </div>
+        <div class="category-info">
+            <h2>التصميم والهوية</h2>
+            <div class="price-list">
+                <div class="price-item">
+                    <span class="item-name">تصميم شعار (لوجو) </span>
+                    <span class="item-price">----</span>
+                </div>
+                <div class="price-item">
+                    <span class="item-name">هوية بصرية كاملة</span>
+                    <span class="item-price">----</span>
+                </div>
+                <div class="price-item">
+                    <span class="item-name">تصميم كروت شخصية</span>
+                    <span class="item-price">----</span>
+                </div>
+                <div class="price-item">
+                    <span class="item-name"> تصميم فلاير دعايا</span>
+                    <span class="item-price">----</span>
+                </div>
+                <div class="price-item">
+                    <span class="item-name">تصميم منيو للمطاعم</span>
+                    <span class="item-price">----</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3 style="color: var(--main-gold);">Techno Science</h3><br>
+                <p>" شريكك التقني للبدايات الذكية والميزانيات المحدودة."</p>
+
+            </div>
+        </div>
+        <div class="footer-bottom"> &copy; 2026 Techno Science - جميع الحقوق محفوظة</div>
+    </footer>
+</body>
+</html>

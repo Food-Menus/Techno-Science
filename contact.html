@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techno Science - اتصل بنا</title>
+    <link rel="icon" href="./statics/logoooo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-card {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            border-right: 8px solid var(--main-gold);
+        }
+        .contact-item { margin: 20px 0; font-size: 1.2rem; }
+        .contact-item strong { color: var(--main-gold); }
+        /* حاوية الأزرار */
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ستايل الزرار الموحد */
+.social-btn {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* أيقونة رمزية */
+.social-btn .icon {
+    font-size: 1.5rem;
+    margin-left: 15px;
+    width: 30px;
+}
+
+.social-btn .text {
+    flex-grow: 1;
+    color: #000000;
+}
+
+.social-btn .arrow {
+    opacity: 0;
+    transform: translateX(10px);
+    transition: 0.3s;
+    color: var(--main-gold);
+}
+
+/* تأثير عند الوقوف على الزرار (Hover) */
+.social-btn:hover {
+    transform: scale(1.02);
+    border-color: var(--main-gold);
+    background: rgba(212, 175, 55, 0.1);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
+}
+
+.social-btn:hover .arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ألوان خاصة بكل منصة (اختياري لزيادة الوضوح) */
+.facebook:hover { border-left: 5px solid #1877F2; }
+.tiktok:hover { border-left: 5px solid #ff0050; }
+
+.contact-info-list .contact-item a {
+    color: #000000;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-info-list .contact-item a:hover {
+    color: var(--main-gold);
+}
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <div class="logo-box">
+            <img src="./statics/logoooo.png" alt="Logo" style="width: 90%;">
+        </div>
+        <div class="site-name">Techno Science</div>
+    </div>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">☰</label>
+        <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+            <li><a href="pricing.html">الأسعار</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="contact-card">
+    <h2 style="margin-bottom: 25px; color: var(--main-gold);">معلومات التواصل</h2>
+    
+    <div class="contact-info-list">
+        <div class="contact-item"><strong>📍 العنوان:</strong> القاهره - شبرا مصر</div>
+        <div class="contact-item"><strong>📞 الهاتف:</strong> <a href="tel:01035637048">01035637048</a></div>
+        <div class="contact-item"><strong>✉️ البريد:</strong> <a href="mailto:kaiser.22.h7@gmail.com">kaiser.22.h7@gmail.com</a></div>
+    </div>
+
+    <hr style="border: 0.1px solid rgba(212, 175, 55, 0.2); margin: 20px 0;">
+
+    <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 15px;">تابعنا على منصاتنا:</h3>
+    
+    <div class="social-buttons">
+        <a href="https://www.facebook.com/Techno.Science.TC" target="_blank" class="social-btn facebook">
+            <span class="icon">f</span>
+            <span class="text">صفحتنا على فيسبوك</span>
+            <span class="arrow">←</span>
+        </a>
+
+        <a href="https://www.tiktok.com/@techno.sciences" target="_blank" class="social-btn tiktok">
+            <span class="icon">♪</span>
+            <span class="text">تابعنا على تيك توك</span>
+            <span class="arrow">←</span>
+        </a>
+    </div>
+</div>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3 style="color: var(--main-gold);">Techno Science</h3><br>
+                <p>" شريكك التقني للبدايات الذكية والميزانيات المحدودة."</p>
+
+            </div>
+        </div>
+        <div class="footer-bottom"> &copy; 2026 Techno Science - جميع الحقوق محفوظة</div>
+    </footer>
+
+
+</body>
+</html>

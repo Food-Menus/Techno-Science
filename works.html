@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Techno Science - معرض أعمالنا</title>
+  <link rel="icon" href="./statics/logoooo.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* --- 1. تنسيقات عامة للقسم العلوي --- */
+    .portfolio-header {
+      text-align: center;
+      padding: 80px 5% 50px;
+    }
+
+    .portfolio-header h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 15px;
+      text-shadow: 0 0 20px rgba(241, 180, 11, 0.4), 2px 2px 5px rgba(0, 0, 0, 0.8);
+    }
+
+    .portfolio-header h3 {
+      font-weight: 300;
+      margin-bottom: 40px;
+      color: #e0e0e0;
+      font-size: 1.4rem;
+    }
+
+    /* --- 2. زرار النموذج التجريبي المطور (Cyber Gold) --- */
+    .pharaonic-btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 45px;
+      background: #1a1a1a; 
+      color: var(--main-gold) !important;
+      text-decoration: none;
+      border-radius: 50px; 
+      font-weight: 800;
+      font-size: 19px;
+      letter-spacing: 1px;
+      border: 2px solid var(--main-gold);
+      overflow: hidden;
+      transition: all 0.4s ease;
+      box-shadow: 0 0 15px rgba(241, 180, 11, 0.2);
+      z-index: 1;
+      margin-bottom: 20px;
+    }
+
+    .pharaonic-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(241, 180, 11, 0.4), transparent);
+      transition: all 0.6s ease;
+      z-index: -1;
+    }
+
+    .pharaonic-btn:hover::before { left: 100%; }
+
+    .pharaonic-btn:hover {
+      color: #1a1a1a !important;
+      background: var(--main-gold);
+      box-shadow: 0 0 30px rgba(241, 180, 11, 0.6);
+      transform: translateY(-5px) scale(1.05);
+    }
+
+    @keyframes pulse-gold {
+      0% { box-shadow: 0 0 0 0 rgba(241, 180, 11, 0.4); }
+      70% { box-shadow: 0 0 0 15px rgba(241, 180, 11, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(241, 180, 11, 0); }
+    }
+
+    .pharaonic-btn { animation: pulse-gold 2s infinite; }
+
+    /* --- 3. شبكة كروت الأعمال --- */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 0 5% 100px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .work-card {
+      background: #ffffff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      border-bottom: 5px solid var(--main-gold);
+      text-align: center;
+      transition: 0.3s ease;
+    }
+
+    .work-card:hover { transform: translateY(-10px); }
+
+    .work-image-container {
+      width: 100%;
+      height: 240px;
+      overflow: hidden;
+      background: #222;
+      cursor: zoom-in;
+    }
+
+    .work-image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .work-image-container:active img { transform: scale(1.4); }
+
+    .work-info { padding: 25px 20px; }
+
+    .work-info h3 {
+      color: #222;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .elegant-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 25px;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      color: white !important;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 600;
+      transition: 0.3s;
+      box-shadow: 0 4px 15px rgba(110, 142, 251, 0.3);
+    }
+
+    .elegant-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(110, 142, 251, 0.5);
+    }
+
+    @media (max-width: 768px) {
+      .portfolio-header h1 { font-size: 2.5rem; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo-container">
+      <div class="logo-box">
+        <img src="./statics/logoooo.png" alt="Logo" style="width: 100%;">
+      </div>
+      <div class="site-name">Techno Science</div>
+    </div>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">☰</label>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="works.html">أعمالنا</a></li>
+        <li><a href="pricing.html">الأسعار</a></li>
+        <li><a href="contact.html">تواصل معنا</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="portfolio-header">
+    <h1><span style="color: var(--main-gold);">معرض أعمالنا</span></h1>
+    <h3>شغل احترافي، وبسعر على قد الإيد ✨</h3>
+    <a href="https://spring-flower.vercel.app/" class="pharaonic-btn" target="_blank">
+       🚀 جرب بنفسك: النموذج التجريبي
+    </a>
+  </section>
+
+  <div class="portfolio-grid">
+
+    <div class="work-card">
+      <div class="work-image-container">
+        <img src="./statics/myWork/518277804_122159483072483733_4349115965960836914_n.jpg" alt="متجر زهور">
+      </div>
+      <div class="work-info">
+        <h3>متجر لبيع الزهور</h3>
+        <a href="https://theflowers-market.vercel.app/" class="elegant-btn" target="_blank">زيارة الموقع 🌐</a>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-image-container">
+        <img src="./statics/myWork/1.png" alt="مطعم برجر">
+      </div>
+      <div class="work-info">
+        <h3>تطبيق لمطعم proast & urger</h3>
+        <a href="https://proast-burger.vercel.app/" class="elegant-btn" target="_blank">زيارة الموقع 🌐</a>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-image-container">
+        <img src="./statics/myWork/469952149_122127782804483733_1554282367885765334_n.jpg" alt="مختبرات">
+      </div>
+      <div class="work-info">
+         <h3>تطبيق لمطعم وجبات سريعة</h3>
+          <a href="https://egyptianburger.vercel.app/" class="elegant-btn" target="_blank">زيارة الموقع 🌐</a>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-image-container">
+        <img src="./statics/myWork/mockup.png" alt="تجارة">
+      </div>
+      <div class="work-info">
+        <h3>منيو محمول لمطعم CANARY </h3>
+        <a href="https://food-menus.github.io/CANARY/" class="elegant-btn" target="_blank">زيارة الموقع 🌐</a>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-image-container">
+        <img src="./statics/myWork/469823125_122127782858483733_5288387439001847588_n.jpg" alt="مختبرات">
+      </div>
+      <div class="work-info">
+        <h3>منيو محمول لمطعم الرحمانى</h3>
+        <a href="https://food-menus.github.io/Al_Rahmani/" class="elegant-btn" target="_blank">زيارة الموقع 🌐</a>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-image-container">
+        <img src="./statics/myWork/2.png" alt="تعليم">
+      </div>
+      <div class="work-info">
+        <h3>نظام إدارة المخازن لمطعم الرحمانى</h3>
+        <a href="#" class="elegant-btn" target="_blank"> موقع خاص غير قابل للعرض </a>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-image-container">
+        <img src="./statics/myWork/5.png" alt="مختبرات">
+      </div>
+      <div class="work-info">
+        <h3>نظام إدارة مصاريف العمال لمطعم الرحمانى</h3>
+        <a href="#" class="elegant-btn" target="_blank"> موقع خاص غير قابل للعرض </a>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-image-container">
+        <img src="./statics/myWork/4.png" alt="روبوتات">
+      </div>
+      <div class="work-info">
+        <h3>موقع معهد اكتوبر العالى للهندسة </h3>
+        <a href="https://october-high-institute.vercel.app/" class="elegant-btn" target="_blank">زيارة الموقع 🌐</a>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-image-container">
+        <img src="./statics/myWork/mock up 3.png" alt="تجارة">
+      </div>
+      <div class="work-info">
+        <h3>نظام ادارة حسابات الشركات </h3>
+        <a href="#" class="elegant-btn" target="_blank"> موقع خاص غير قابل للعرض </a>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-image-container">
+        <img src="./statics/myWork/Screenshot from 2026-02-09 02-52-29.png" alt="تجارة">
+      </div>
+      <div class="work-info">
+        <h3>موقع جمعية رساله لتحفيظ القران</h3>
+        <h3>موقع تجريبي</h3>
+        <a href="https://resala-quran.vercel.app/" class="elegant-btn" target="_blank">زيارة الموقع 🌐</a>
+      </div>
+    </div>
+
+  </div>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3 style="color: var(--main-gold);">Techno Science</h3><br>
+                <p>" شريكك التقني للبدايات الذكية والميزانيات المحدودة."</p>
+
+            </div>
+        </div>
+        <div class="footer-bottom"> &copy; 2026 Techno Science - جميع الحقوق محفوظة</div>
+    </footer>
+
+</body>
+</html>

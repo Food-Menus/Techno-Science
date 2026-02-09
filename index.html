@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techno Science - الرئيسية</title>
+    <link rel="icon" href="./statics/logoooo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero {
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.486);
+            margin: 40px 5%;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--dark-grey);
+        }
+
+        .hero span {
+            color: var(--main-gold);
+        }
+/* تنسيق الزراير الموحد */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white !important;
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* تأثير التفاعل (Hover) لكل زرار بلونه */
+.btn-red:hover { 
+    box-shadow: 0 0 20px rgba(213, 24, 24, 0.5); 
+    transform: translateY(-3px);
+}
+.btn-green:hover { 
+    box-shadow: 0 0 20px rgba(57, 140, 21, 0.5); 
+    transform: translateY(-3px);
+}
+.btn-gold-border:hover { 
+    box-shadow: 0 0 20px rgba(241, 180, 11, 0.4); 
+    transform: translateY(-3px);
+    border-color: var(--main-gold);
+}
+
+/* حاوية الزراير */
+.btn-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+
+        <div class="logo-container">
+            <div class="logo-box">
+                <img src="./statics/logoooo.png" alt="Logo" style="width: 90%;">
+            </div>
+            <div class="site-name">Techno Science</div>
+        </div>
+
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">☰</label>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+                <li><a href="pricing.html">الأسعار</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <section class="hero">
+        <img src="./statics/logoooo.png" alt="Logo" class="responsive-logo">
+        <br><br>
+        <h1><span>Techno Science</span></h1>
+        <h2 style="color: #ffffff;"> مرحبا بك </h2><br>
+        <h4 style="color: #ffffff;"> هدفنا نساعد كل صاحب مشروع يبدأ رحلته على النت بحلول برمجية سهلة، بتأدي الغرض، وبسعر على قد الإيد.</h4><br><br>
+
+        <div class="btn-group">
+            <a href="pricing.html" class="btn btn-gold-border"
+                style="background: var(--dark-grey-btn); width: 100%; border: 1.5px solid var(--main-gold); color: var(--main-gold) !important;">
+                <span style="margin-left: 8px;">💰</span> قائمة الأسعار
+            </a>
+       
+            <a href="works.html" class="btn btn-gold-border"
+                style="background: var(--dark-grey-btn); width: 100%; border: 1.5px solid var(--main-gold); color: var(--main-gold) !important;">
+                <span style="margin-left: 8px;">🎨</span> معرض الأعمال 
+            </a>
+        </div>
+                <div class="btn-group">
+            <a href="contact.html" class="btn btn-green" style="background: var(--main-green); flex: 1;">
+                <span style="margin-left: 8px;">📞</span> تواصل معنا
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3 style="color: var(--main-gold);">Techno Science</h3><br>
+                <p>" شريكك التقني للبدايات الذكية والميزانيات المحدودة."</p>
+
+            </div>
+        </div>
+        <div class="footer-bottom"> &copy; 2026 Techno Science - جميع الحقوق محفوظة</div>
+    </footer>
+
+</body>
+
+</html>
